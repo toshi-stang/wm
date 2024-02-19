@@ -8,10 +8,8 @@ export default function Footer() {
       </footer>
 
       <div className={styles.copyright}>
-            <p>
-              © {new Date().getFullYear()} Marimo, LLC. All Rights Reserved.
-            </p>
-          </div>
+        <p>© {new Date().getFullYear()} Marimo, LLC. All Rights Reserved.</p>
+      </div>
     </>
   )
 }
