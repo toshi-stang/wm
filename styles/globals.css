@@ -10,13 +10,30 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --theme1: #D6CD2B;
+  --theme2: #A6C857;
+  --theme3: #6A984E;
+  --theme4: #386641;
+  --theme5: #333333;
+}
+.hero-image {
+  background-image: url('/nancy.png');
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 main {
-  padding: 5rem 0;
+  padding: 5rem 5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: top;
+  align-items: left;
 }
 
 code {
@@ -33,3 +50,29 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.newspaper {
+  padding: 3rem 0;
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 2px dotted #a7a7a7;;
+  justify-content: left;
+  align-items: left;
+  resize: both;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding-top: 2rem;
+  color: var(--theme4);
+}
+/*
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 5rem;
+    color: var(--theme1);
+  }
+}
+*/
