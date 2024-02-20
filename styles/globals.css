@@ -17,6 +17,41 @@ body {
   --theme4: #386641;
   --theme5: #333333;
 }
+
+.hlogo {
+  display: block;
+  height: 5em;
+  margin-top: 20px;
+  margin-right: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+  margin-bottom: 0.5rem;
+  position: relative;
+  margin-left: auto;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #444444;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-bottom: 3px solid #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.topnav a:hover {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--theme2);
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
 .hero-image {
   background-image: url('/nancy.png');
   background-color: #cccccc;
@@ -28,7 +63,7 @@ body {
 }
 
 main {
-  padding: 5rem 5rem;
+  padding: 1rem 5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -40,8 +75,8 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .newspaper {
@@ -51,7 +86,7 @@ main {
   column-rule: 2px dotted #a7a7a7;;
   justify-content: left;
   align-items: left;
-  resize: both;
+  resize: none;
   overflow: auto;
 }
 
@@ -61,11 +96,42 @@ h1 {
   padding-top: 2rem;
   color: var(--theme4);
 }
-/*
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 5rem;
-    color: var(--theme1);
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
   }
 }
-*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
